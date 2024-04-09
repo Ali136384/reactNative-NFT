@@ -131,7 +131,7 @@ export default function NFTdetails({ route }) {
                     </View>
                   </View>
                   <View style={{ gap: 20 }}>
-                    <View style={style.singleStat}>
+                    <View style={style.statsInsideContainer}>
                       <Text style={{ color: "white", bottom: 5 }}>
                         Contact Address
                       </Text>
