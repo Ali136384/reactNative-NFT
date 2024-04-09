@@ -132,13 +132,7 @@ export default function HomeScreen() {
                         </View>
                         <Text style={style.title}>{ele.title}</Text>
                         <View style={style.companyOfficialContainer}>
-                          <View
-                            style={{
-                              display: "flex",
-                              alignItems: "center",
-                              flexDirection: "row",
-                            }}
-                          >
+                          <View style={style.isOfficial_Company}>
                             <Text style={style.companyAndDate}>
                               {ele.company}
                             </Text>
@@ -156,15 +150,7 @@ export default function HomeScreen() {
                       <View style={style.statsContainer}>
                         <View style={style.cardStatsHolder}>
                           <Entypo name="eye" size={19} color="white" />
-                          <Text
-                            style={{
-                              textAlign: "center",
-                              paddingHorizontal: 3,
-                              color: "white",
-                            }}
-                          >
-                            {ele.views}
-                          </Text>
+                          <Text style={style.singleStat}>{ele.views}</Text>
                         </View>
                         <View style={style.cardStatsHolder}>
                           <FontAwesome
@@ -172,15 +158,7 @@ export default function HomeScreen() {
                             size={15}
                             color="white"
                           />
-                          <Text
-                            style={{
-                              textAlign: "center",
-                              paddingHorizontal: 3,
-                              color: "white",
-                            }}
-                          >
-                            {ele.comments}
-                          </Text>
+                          <Text style={style.singleStat}>{ele.comments}</Text>
                         </View>
                         <View style={style.cardStatsHolder}>
                           <Ionicons
@@ -188,32 +166,9 @@ export default function HomeScreen() {
                             size={19}
                             color="white"
                           />
-                          <Text
-                            style={{
-                              textAlign: "center",
-                              paddingHorizontal: 3,
-                              color: "white",
-                            }}
-                          >
-                            {ele.lithum}
-                          </Text>
+                          <Text style={style.singleStat}>{ele.lithum}</Text>
                         </View>
-                        <View
-                          style={{
-                            width: 30,
-                            height: 30,
-                            borderRadius: 30,
-                            backgroundColor: COLORS.black,
-                            justifyContent: "center",
-                            alignItems: "center",
-                            alignContent: "center",
-                            borderColor: "#4e46e5",
-                            borderWidth: 1,
-                            right: -30,
-                            // marginLeft: 68,
-                            // marginRight: 19,
-                          }}
-                        >
+                        <View style={style.heart}>
                           <AntDesign name="heart" size={20} color="#4e46e5" />
                         </View>
                       </View>
@@ -304,5 +259,29 @@ const style = StyleSheet.create({
     justifyContent: "center",
     alignItems: "center",
     height: 28,
+  },
+  heart: {
+    width: 30,
+    height: 30,
+    borderRadius: 30,
+    backgroundColor: COLORS.black,
+    justifyContent: "center",
+    alignItems: "center",
+    alignContent: "center",
+    borderColor: "#4e46e5",
+    borderWidth: 1,
+    right: -30,
+    // marginLeft: 68,
+    // marginRight: 19,
+  },
+  singleStat: {
+    textAlign: "center",
+    paddingHorizontal: 3,
+    color: "white",
+  },
+  isOfficial_Company: {
+    display: "flex",
+    alignItems: "center",
+    flexDirection: "row",
   },
 });
